@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakthrough Designs - Select Theme</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #050505;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 4rem 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #fff, #999);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.subtitle {
+      color: #888;
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      max-width: 1400px;
+      width: 100%;
+    }
+
+    .theme-card {
+      position: relative;
+      background: #111;
+      border-radius: 20px;
+      overflow: hidden;
+      text-decoration: none;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+      border: 1px solid #333;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .theme-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      border-color: #555;
+    }
+
+    .preview-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .theme-card:hover .preview-img {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .card-desc {
+      color: #aaa;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 1.5rem;
+      align-self: flex-start;
+    }
+
+    .badge.red { background: rgba(230, 43, 30, 0.2); color: #ff5555; border: 1px solid #ff5555; }
+    .badge.blue { background: rgba(0, 102, 204, 0.2); color: #55aaff; border: 1px solid #55aaff;}
+    .badge.combined { background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid #10b981; }
+
+    @media (max-width: 1024px) {
+      .container { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .container { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Project Previews</h1>
+    <p class="subtitle">Select a design theme below to view the interactive HTML/CSS implementation.</p>
+  </header>
+
+  <div class="container">
+    <a href="dark-theme.html" class="theme-card">
+      <img src="assets/images/hero_dark_1776794973137.png" alt="Dark Theme Preview" class="preview-img">
+      <div class="card-content">
+        <div>
+          <h2 class="card-title">Dark/Red Theme</h2>
+          <p class="card-desc">A bold, high-contrast industrial aesthetic featuring vivid red accents and strong typography.</p>
+        </div>
+        <span class="badge red">View Design</span>
+      </div>
+    </a>
+
+    <a href="light-theme.html" class="theme-card">
+      <img src="assets/images/hero_light_1776795148964.png" alt="Light Theme Preview" class="preview-img">
+      <div class="card-content">
+        <div>
+          <h2 class="card-title">Light/Blue Theme</h2>
+          <p class="card-desc">A clean, modern, and trustworthy layout utilizing soft blue tones and generous white space.</p>
+        </div>
+        <span class="badge blue">View Design</span>
+      </div>
+    </a>
+
+    <a href="combined-theme.html" class="theme-card">
+      <img src="assets/images/plumbers_team_1776795403152.png" alt="Combined Theme Preview" class="preview-img">
+      <div class="card-content">
+        <div>
+          <h2 class="card-title">Combined Variant</h2>
+          <p class="card-desc">Full-content layout with all sections — What We Do, Portfolio, Who We Are, and Get Started Today — in the clean light/blue style.</p>
+        </div>
+        <span class="badge combined">View Design</span>
+      </div>
+    </a>
+  </div>
+
+</body>
+</html>
